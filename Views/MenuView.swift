@@ -9,8 +9,8 @@ import SwiftUI
 struct MenuView: View {
     @State private var showCart = false
     @State private var currentIndex = 0
-    @State private var selectedIngredients = Array(repeating: true, count: 6) // Mevcut malzemeler için
-    @State private var selectedExtraIngredients = Array(repeating: false, count: 10) // Ekstra malzemeler için
+    @State private var selectedIngredients = Array(repeating: true, count: 6)
+    @State private var selectedExtraIngredients = Array(repeating: false, count: 10)
     @State private var selectedPizza: Pizza?
     
     let extraIngredients = ["Sosis", "Salam", "Sucuk", "Mısır", "Yeşil Biber", "Kırmızı Biber", "Soğan", "Zeytin", "Mantar", "Turşu"]
@@ -35,7 +35,6 @@ struct MenuView: View {
         NavigationView {
             VStack {
                 Spacer()
-                
                 VStack {
                     Image(pizzas[currentIndex % pizzas.count].imageName)
                         .resizable()
@@ -45,7 +44,7 @@ struct MenuView: View {
                         .animation(.spring(response: 0.5, dampingFraction: 0.8))
                         .onTapGesture {
                             self.currentIndex += 1
-                            clearExtraIngredients() // Pizza değiştiğinde ekstra malzeme seçimlerini temizle
+                            clearExtraIngredients()
                         }
                         .offset(y: -8)
                     
@@ -63,6 +62,7 @@ struct MenuView: View {
                                 .multilineTextAlignment(.center)
                             
                             ForEach(Array(zip(ingredients, selectedIngredients)), id: \.0) { ingredient, isChecked in
+                                
                                 HStack {
                                     Text(ingredient)
                                         .font(.custom("Roboto-Light", size: 24))
@@ -88,94 +88,73 @@ struct MenuView: View {
                                     Text(extraIngredient)
                                         .font(.custom("Roboto-Light", size: 24))
                                     
-                             Spacer()
+                                    Spacer()
                                     
                                     Image(systemName: isChecked ? "checkmark.square.fill" : "square")
                                         .foregroundColor(isChecked ? .green : .black)
                                         .onTapGesture {
-                                            selectedExtraIngredients[extraIngredients.firstIndex(of: extraIngredient)!].toggle()
+                                            if let index = extraIngredients.firstIndex(of: extraIngredient) {
+                                                selectedExtraIngredients[index].toggle()
+                                                if selectedExtraIngredients[index] {
+                                                    print(extraIngredient + " eklendi.")
+                                                } 
+                                            }
                                         }
                                 }
                             }
                         }
                     }.padding(.vertical, -20)
-                    .padding(.horizontal, 25)
-                    .onChange(of: selectedIngredients) { _ in
-                        updatePrice()
-                    }
-                    .onChange(of: selectedExtraIngredients) { _ in
-                        updatePrice()
-                    }
-                }
-                .onAppear {
-                    updatePrice()
+                        .padding(.horizontal, 25)
                 }
                 
                 VStack {
-                  
-                    
                     HStack {
                         Spacer()
-                        
                         Text("Toplam:\n\(totalPrice, specifier: "%.2f") TL")
-                                .font(.custom("Roboto-Bold", size: 24))
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                           
+                            .font(.custom("Roboto-Bold", size: 24))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
                         
                         Spacer()
                         
                         VStack {
                             Spacer()
-                            
                             Button(action: {
                                 showCart = true
                                 selectedPizza = pizzas[currentIndex % pizzas.count]
                             }) {
-                                VStack {
-                                   // Spacer()
-                                    
-                                    Text("Sepete Ekle")
-                                        .font(.custom("Roboto-Regular", size: 24))
-                                        .foregroundColor(.white)
-                                       .padding(.horizontal, 30)
-                                        .padding(.vertical, 10)
-                                        .background(.green)
-                                        .cornerRadius(10)
-                                        .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                                  
-                                }
+                                Text("Sepete Ekle")
+                                    .font(.custom("Roboto-Regular", size: 24))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal, 30)
+                                    .padding(.vertical, 10)
+                                    .background(.green)
+                                    .cornerRadius(10)
+                                    .shadow(color: .gray, radius: 5, x: 2, y: 2)
                             }
-                            
-                           Spacer()
+                            Spacer()
                         }
-                        
-                     Spacer()
+                        Spacer()
                     }
                     .background(Color(red: 19/255, green: 72/255, blue: 140/255).opacity(0.8))
                 }
                 .frame(height: UIScreen.main.bounds.height/10)
             }
             .navigationBarItems(trailing:
-                NavigationLink(destination: CartView(selectedPizza: selectedPizza, totalPrice: totalPrice), isActive: $showCart) {
-                    Image(systemName: "cart")
-                        .foregroundColor(.red)
-                        .font(.system(size: 24))
-                }
+                                    NavigationLink(destination: CartView(selectedPizza: selectedPizza, totalPrice: totalPrice), isActive: $showCart) {
+                Image(systemName: "cart")
+                    .foregroundColor(.red)
+                    .font(.system(size: 24))
+            }
             )
             .edgesIgnoringSafeArea(.bottom)
         }
     }
     
-    func updatePrice() {
-        // totalPrice güncellemesi burada yapılmamaktadır
-    }
-    
     func clearExtraIngredients() {
-        selectedExtraIngredients = Array(repeating: false, count: 10)
+        selectedExtraIngredients = Array(repeating: false, count: extraIngredients.count)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

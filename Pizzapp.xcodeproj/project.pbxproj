@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2935CF29F8586100B9210E /* PizzaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2935CE29F8586100B9210E /* PizzaModel.swift */; };
+		5F47D6572A9BE0B800840F7C /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F47D6562A9BE0B800840F7C /* RowView.swift */; };
+		5F6ECCF82A420DA2001600EB /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6ECCF72A420DA2001600EB /* CartView.swift */; };
 		5FD26DB729F725D900D8803E /* PizzappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD26DB629F725D900D8803E /* PizzappApp.swift */; };
-		5FD26DB929F725D900D8803E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD26DB829F725D900D8803E /* ContentView.swift */; };
+		5FD26DB929F725D900D8803E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD26DB829F725D900D8803E /* MenuView.swift */; };
 		5FD26DBB29F725DB00D8803E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD26DBA29F725DB00D8803E /* Assets.xcassets */; };
 		5FD26DBE29F725DB00D8803E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD26DBD29F725DB00D8803E /* Preview Assets.xcassets */; };
+		5FF3540629F7454C00FD22E4 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF3540129F7454C00FD22E4 /* Roboto-Black.ttf */; };
+		5FF3540729F7454C00FD22E4 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF3540229F7454C00FD22E4 /* Roboto-Light.ttf */; };
+		5FF3540829F7454C00FD22E4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF3540329F7454C00FD22E4 /* Roboto-Regular.ttf */; };
+		5FF3540929F7454C00FD22E4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF3540429F7454C00FD22E4 /* Roboto-Medium.ttf */; };
+		5FF3540A29F7454C00FD22E4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF3540529F7454C00FD22E4 /* Roboto-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2935CE29F8586100B9210E /* PizzaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaModel.swift; sourceTree = "<group>"; };
+		5F47D6562A9BE0B800840F7C /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		5F6ECCF72A420DA2001600EB /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		5FD26DB329F725D900D8803E /* Pizzapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizzapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD26DB629F725D900D8803E /* PizzappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzappApp.swift; sourceTree = "<group>"; };
-		5FD26DB829F725D900D8803E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5FD26DB829F725D900D8803E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		5FD26DBA29F725DB00D8803E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FD26DBD29F725DB00D8803E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5FF3540129F7454C00FD22E4 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		5FF3540229F7454C00FD22E4 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		5FF3540329F7454C00FD22E4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		5FF3540429F7454C00FD22E4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		5FF3540529F7454C00FD22E4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		5FF3540B29F7480800FD22E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +49,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F47D6542A9BDFA100840F7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F2935CE29F8586100B9210E /* PizzaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F47D6552A9BE03D00840F7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FD26DB829F725D900D8803E /* MenuView.swift */,
+				5F6ECCF72A420DA2001600EB /* CartView.swift */,
+				5F47D6562A9BE0B800840F7C /* RowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F47D6582A9BE87F00840F7C /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				5FD26DB629F725D900D8803E /* PizzappApp.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		5F47D6592A9BE89E00840F7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FD26DBA29F725DB00D8803E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5FD26DAA29F725D900D8803E = {
 			isa = PBXGroup;
 			children = (
+				5F47D6592A9BE89E00840F7C /* Resources */,
+				5F47D6582A9BE87F00840F7C /* Applications */,
+				5FF3540029F744F300FD22E4 /* Fonts */,
+				5F47D6552A9BE03D00840F7C /* Views */,
+				5F47D6542A9BDFA100840F7C /* Model */,
 				5FD26DB529F725D900D8803E /* Pizzapp */,
 				5FD26DB429F725D900D8803E /* Products */,
 			);
@@ -51,9 +107,7 @@
 		5FD26DB529F725D900D8803E /* Pizzapp */ = {
 			isa = PBXGroup;
 			children = (
-				5FD26DB629F725D900D8803E /* PizzappApp.swift */,
-				5FD26DB829F725D900D8803E /* ContentView.swift */,
-				5FD26DBA29F725DB00D8803E /* Assets.xcassets */,
+				5FF3540B29F7480800FD22E4 /* Info.plist */,
 				5FD26DBC29F725DB00D8803E /* Preview Content */,
 			);
 			path = Pizzapp;
@@ -65,6 +119,18 @@
 				5FD26DBD29F725DB00D8803E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5FF3540029F744F300FD22E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5FF3540129F7454C00FD22E4 /* Roboto-Black.ttf */,
+				5FF3540529F7454C00FD22E4 /* Roboto-Bold.ttf */,
+				5FF3540229F7454C00FD22E4 /* Roboto-Light.ttf */,
+				5FF3540429F7454C00FD22E4 /* Roboto-Medium.ttf */,
+				5FF3540329F7454C00FD22E4 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +191,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF3540A29F7454C00FD22E4 /* Roboto-Bold.ttf in Resources */,
 				5FD26DBE29F725DB00D8803E /* Preview Assets.xcassets in Resources */,
 				5FD26DBB29F725DB00D8803E /* Assets.xcassets in Resources */,
+				5FF3540929F7454C00FD22E4 /* Roboto-Medium.ttf in Resources */,
+				5FF3540829F7454C00FD22E4 /* Roboto-Regular.ttf in Resources */,
+				5FF3540729F7454C00FD22E4 /* Roboto-Light.ttf in Resources */,
+				5FF3540629F7454C00FD22E4 /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FD26DB929F725D900D8803E /* ContentView.swift in Sources */,
+				5FD26DB929F725D900D8803E /* MenuView.swift in Sources */,
+				5F47D6572A9BE0B800840F7C /* RowView.swift in Sources */,
 				5FD26DB729F725D900D8803E /* PizzappApp.swift in Sources */,
+				5F6ECCF82A420DA2001600EB /* CartView.swift in Sources */,
+				5F2935CF29F8586100B9210E /* PizzaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +341,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pizzapp/Preview Content\"";
+				DEVELOPMENT_TEAM = GKTV4JSGZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pizzapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,8 +371,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pizzapp/Preview Content\"";
+				DEVELOPMENT_TEAM = GKTV4JSGZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pizzapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
